@@ -1,0 +1,7 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\gm82_updater"
+
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+
+START /wait "" "%PALG%" "%CD%\Output"

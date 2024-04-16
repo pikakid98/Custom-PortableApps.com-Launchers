@@ -1,0 +1,7 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\NW.js"
+
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+
+"%PALG%" "%CD%\Output"
