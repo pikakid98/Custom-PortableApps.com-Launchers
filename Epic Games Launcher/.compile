@@ -1,9 +1,0 @@
-mkdir "Output\App"
-mkdir "Output\App\Appinfo"
-mkdir "Output\App\Epic Games Launcher"
-mkdir "Output\App\launch"
-
-copy "Launcher\*.bat" "Output\App\launch
-robocopy "Appinfo" "Output\App\Appinfo" /MIR
-
-START /wait "" "%PALG%" "%CD%\Output"

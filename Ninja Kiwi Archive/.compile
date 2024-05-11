@@ -1,8 +1,0 @@
-mkdir "Output\App"
-mkdir "Output\App\Appinfo"
-mkdir "Output\App\Ninja Kiwi Archive"
-mkdir "Output\App\Default Data\Ninja Kiwi Archive"
-
-robocopy "Appinfo" "Output\App\Appinfo" /MIR
-
-START /wait "" "%PALG%" "%CD%\Output"
