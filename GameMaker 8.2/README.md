@@ -1,0 +1,6 @@
+# Do not use the other versions. Please use [This](https://github.com/pikakid98/Custom-PortableApps.com-Launchers/tree/main/GameMaker%208.2)
+
+# Archived description
+
+# Notice
+GameMaker 8.2's PortableApps launcher comes with 3 seperate ini files. One for [gm82_updater](https://github.com/zulc22/8.2Updater-next), One for my own gm82_updater_fe (requires gm82_updater) [[Binary]](https://cdn.discordapp.com/attachments/1073700274423734402/1168532232487567461/gm82_updater_fe.7z?ex=662f9772&is=661d2272&hm=5c841789c34424994bf3ab27fc59848884c82480302c02b6c18557ea5af3ac80&) [[Source]](https://cdn.discordapp.com/attachments/1073700274423734402/1168532232781189120/gm82_updater_fe_src.7z?ex=662f9772&is=661d2272&hm=c72705b0e93aaff417bb43bf3e1fc83f4085b3e0f80d32a890935427ae8ac75c&) (Before you ask why it isn't on GitHub, I'm still working on it and will release it as soon as it's properly done and stable). And finally a version with none of the updaters
