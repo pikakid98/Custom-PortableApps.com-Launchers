@@ -1,6 +1,5 @@
 mkdir "Output\App"
 mkdir "Output\App\Appinfo"
-mkdir "Output\App\gm82_updater"
 mkdir "Output\App\GameMaker 8.2"
 
 robocopy "Appinfo" "Output\App\Appinfo" /MIR
