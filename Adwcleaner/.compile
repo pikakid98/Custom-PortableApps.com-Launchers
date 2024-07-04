@@ -1,0 +1,10 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\Adwcleaner"
+mkdir "Output\App\Launcher"
+
+copy "Main\*.bat" "Output\App\Launcher"
+copy "Msg\*.vbs" "Output\App\Launcher"
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+
+START /wait "" "%PALG%" "%CD%\Output"

@@ -1,0 +1,9 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\GOG Galaxy"
+mkdir "Output\App\Launcher"
+
+copy "*.bat" "Output\App\Launcher"
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+
+START /wait "" "%PALG%" "%CD%\Output"

@@ -1,0 +1,15 @@
+mkdir "Output\App"
+
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\Bats"
+mkdir "Output\App\Tools"
+mkdir "Output\App\TPDP"
+mkdir "Output\App\TPDP - SOD"
+mkdir "Output\App\DefaultData"
+
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+robocopy "DefaultData" -o"App\DefaultData"
+
+copy "*.bat" "Output\App\Bats"
+
+START /wait "" "%PALG%" "%CD%\Output"
