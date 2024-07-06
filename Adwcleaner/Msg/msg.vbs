@@ -1,1 +1,0 @@
-answer = msgbox("Old Adwcleaner version backed up", vbDefaultButton1, "Adwcleaner")
