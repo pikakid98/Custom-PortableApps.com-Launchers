@@ -1,0 +1,23 @@
+::=====================================================================================
+mkdir "Output\Launcher\App"
+mkdir "Output\Launcher\App\Appinfo"
+mkdir "Output\Launcher\App\Godot"
+mkdir "Output\Launcher\App\Launcher"
+
+robocopy "Appinfo" "Output\Launcher\App\Appinfo" /MIR
+copy "AppInfo\Launcher\With Godot Launcher\GodotPortable.ini" "Output\Launcher\App\Appinfo"
+
+START /wait "" "%PALG%" "%CD%\Output\Launcher"
+::=====================================================================================
+
+
+::=====================================================================================
+mkdir "Output\No Launcher\App"
+mkdir "Output\No Launcher\App\Appinfo"
+mkdir "Output\No Launcher\App\Godot"
+
+robocopy "Appinfo" "Output\No Launcher\App\Appinfo" /MIR
+copy "AppInfo\Launcher\Without Godot Launcher (Requires editing)\GodotPortable.ini" "Output\No Launcher\App\Appinfo"
+
+START /wait "" "%PALG%" "%CD%\Output\No Launcher"
+::=====================================================================================
