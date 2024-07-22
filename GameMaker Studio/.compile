@@ -1,8 +1,8 @@
 mkdir "Output\App"
 mkdir "Output\App\Appinfo"
-mkdir "Output\App\Godot"
-mkdir "Output\App\Launcher"
+mkdir "Output\App\GameMaker Studio"
 
+robocopy "DefaultData" "Output\App\DefaultData" /MIR
 robocopy "Appinfo" "Output\App\Appinfo" /MIR
 
 START /wait "" "%PALG%" "%CD%\Output"

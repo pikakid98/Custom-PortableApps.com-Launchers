@@ -17,7 +17,7 @@ mkdir "Output\No Launcher\App\Appinfo"
 mkdir "Output\No Launcher\App\Solarus"
 
 robocopy "Appinfo" "Output\No Launcher\App\Appinfo" /MIR
-copy "AppInfo\Launcher\Without SolLauncher)\GodotPortable.ini" "Output\No Launcher\App\Appinfo"
+copy "AppInfo\Launcher\Without SolLauncher)\SolarusPortable.ini" "Output\No Launcher\App\Appinfo"
 
 START /wait "" "%PALG%" "%CD%\Output\No Launcher"
 ::=====================================================================================
