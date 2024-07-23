@@ -1,0 +1,13 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\Open Shell"
+
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+robocopy "DefaultData" "Output\App\DefaultData" /MIR
+
+START /wait "" "%PALG%" "%CD%\Output"
+
+echo "Sorry. nothing" >> "%CD%\Output\help.html"
+
+START /wait "" "%PALI%" "%CD%\Output"
+move "*.exe" "Output"
