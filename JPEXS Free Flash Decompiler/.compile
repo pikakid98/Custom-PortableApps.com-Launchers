@@ -5,3 +5,8 @@ mkdir "Output\App\JPEXS Free Flash Decompiler"
 robocopy "Appinfo" "Output\App\Appinfo" /MIR
 
 START /wait "" "%PALG%" "%CD%\Output"
+
+echo "Sorry. nothing" >> "%CD%\Output\help.html"
+
+START /wait "" "%PALI%" "%CD%\Output"
+move "*.exe" "Output"

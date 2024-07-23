@@ -1,9 +1,30 @@
 mkdir "Output\App"
 mkdir "Output\App\Appinfo"
 mkdir "Output\App\GOG Galaxy"
-mkdir "Output\App\Launcher"
 
-copy "*.bat" "Output\App\Launcher"
 robocopy "Appinfo" "Output\App\Appinfo" /MIR
 
+mkdir "Output\App\Launcher"
+
+PUSHD "%CD%"
+
+cd "..\..\..\AutoHotkey\NoAdmin"
+mkdir ".Cmpl8r"
+mkdir "Output"
+copy ".compile" ".Cmpl8r"
+ren ".Cmpl8r\.compile" "[CompileTemp].bat"
+call ".Cmpl8r\[CompileTemp].bat"
+rmdir ".Cmpl8r" /S /Q
+
+POPD
+
+move "..\..\..\AutoHotkey\NoAdmin\Output\NoAdmin.exe" "Output\App\Launcher"
+
+rmdir "..\..\..\AutoHotkey\NoAdmin\Output" /S /Q
+
 START /wait "" "%PALG%" "%CD%\Output"
+
+echo "Sorry. nothing" >> "%CD%\Output\help.html"
+
+START /wait "" "%PALI%" "%CD%\Output"
+move "*.exe" "Output"

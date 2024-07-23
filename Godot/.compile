@@ -8,6 +8,28 @@ robocopy "Appinfo" "Output\Launcher\App\Appinfo" /MIR
 copy "AppInfo\Launcher\With Godot Launcher\GodotPortable.ini" "Output\Launcher\App\Appinfo"
 
 START /wait "" "%PALG%" "%CD%\Output\Launcher"
+
+echo "Sorry. nothing" >> "%CD%\Output\Launcher\help.html"
+
+PUSHD "%CD%"
+
+cd "..\..\..\AutoHotkey\Godot Launcher"
+mkdir ".Cmpl8r"
+mkdir "Output"
+copy ".compile" ".Cmpl8r"
+ren ".Cmpl8r\.compile" "[CompileTemp].bat"
+call ".Cmpl8r\[CompileTemp].bat"
+rmdir ".Cmpl8r" /S /Q
+
+POPD
+
+move "..\..\..\AutoHotkey\Godot Launcher\Output\Godot Launcher.exe" "Output\Launcher\App\Launcher"
+
+rmdir "..\..\..\AutoHotkey\Godot Launcher\Output" /S /Q
+
+START /wait "" "%PALI%" "%CD%\Output\Launcher"
+ren "Output\GodotPortable_1.0.paf.exe" "GodotPortable_1.0_launcher.paf.exe"
+move "*.exe" "Output\Launcher"
 ::=====================================================================================
 
 
@@ -20,4 +42,9 @@ robocopy "Appinfo" "Output\No Launcher\App\Appinfo" /MIR
 copy "AppInfo\Launcher\Without Godot Launcher (Requires editing)\GodotPortable.ini" "Output\No Launcher\App\Appinfo"
 
 START /wait "" "%PALG%" "%CD%\Output\No Launcher"
+
+echo "Sorry. nothing" >> "%CD%\Output\No Launcher\help.html"
+
+START /wait "" "%PALI%" "%CD%\Output\No Launcher"
+move "*.exe" "Output\No Launcher"
 ::=====================================================================================
