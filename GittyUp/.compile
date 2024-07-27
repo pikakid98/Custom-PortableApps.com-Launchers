@@ -1,0 +1,12 @@
+mkdir "Output\App"
+mkdir "Output\App\Appinfo"
+mkdir "Output\App\GittyUp"
+
+robocopy "Appinfo" "Output\App\Appinfo" /MIR
+
+"%PALG%" "%CD%\Output"
+
+echo "Sorry. nothing" >> "%CD%\Output\help.html"
+
+START /wait "" "%PALI%" "%CD%\Output"
+move "*.exe" "Output"
