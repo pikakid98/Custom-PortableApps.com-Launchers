@@ -3,6 +3,8 @@ mkdir "Output\App\Appinfo"
 mkdir "Output\App\GameMaker 8.2"
 
 robocopy "Appinfo" "Output\App\Appinfo" /MIR
+robocopy "Fonts" "Output\App\Fonts" /MIR
+robocopy "DefaultData" "Output\App\DefaultData" /MIR
 
 START /wait "" "%PALG%" "%CD%\Output"
 
