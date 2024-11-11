@@ -1,0 +1,2 @@
+> [!WARNING]
+> Deprecation notice!
